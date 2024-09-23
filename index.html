@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>WebWhatsapp</title>
+</head>
+<body>
+    <section class="display-buttons">
+        <nav class="nav1">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+        </nav>
+        <nav class="nav2">
+            <button>1</button>
+            <button>2</button>
+        </nav>
+    </section>
+    <section class="display-contato">
+        <header>
+            <div class="box-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar um contato">
+            </div>
+            <div class="box-bottoes">
+                <button>Tudo</button>
+                <button>Não lidas</button>
+                <button>Grupos</button>
+            </div>
+        </header>
+    </section>
+    <section class="display-message">
+        <header>
+            <div class="group-avatar">
+                <img src="" alt="avatar" >
+                <h3>Marcos Silva</h3>
+            </div>
+            <div class="group-buttons">
+
+            </div>
+        </header>
+    </section>
+    <style>
+        body{
+            gap: 2px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            background-color: #1c1c1c;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .display-buttons{
+            height: 100vh;
+            width: 80px;
+            background-color: #333333;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .display-buttons nav{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .display-buttons button{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #444444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .display-contato{
+            height: 100vh;
+            width: 30%;
+            background-color: #1c1c1c;
+        }
+        .display-contato .box-input{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 7px;
+            background-color: #333333;
+        }
+        .display-contato .box-input input{
+            width: 90%;
+            color: #fff;
+            background-color: #333333;
+            border: none;
+            outline: none;
+            padding: 7px;
+        }
+        .display-contato .box-bottoes{
+            padding-left: 25px;
+            margin-top: 5px;
+            gap: 10px;
+            display: flex;
+            justify-content: start;
+        }
+        .display-contato .box-bottoes button{
+            padding: 5px 16px;
+            background-color: #333333;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            opacity: .5;
+            transition: .9s;
+        }
+        .display-contato .box-bottoes button:hover{
+            opacity: 1;
+            color: green;
+        }
+        .display-message{
+            height: 100vh;
+            width: 65%;
+            background-color: #333333;
+        }
+    </style>
+</body>
+</html>
