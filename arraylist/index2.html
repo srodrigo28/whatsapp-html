@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p><span id="demo"></span></p>
+
+    <script defer>
+        
+        var listaProdutos = [
+            {nome: "Arroz",  preco: 5.50},
+            {nome: "Feijão", preco: 4.20},
+            {nome: "Batata", preco: 3.80}
+        ]
+        
+        /**/
+        function aplicarDesconto(item){
+            return{
+                nome: item.nome,
+                preco: (item.preco - (item.preco * 0.1))
+            }
+        }
+
+        function aplicarLucro(item){
+            return{
+                nome: item.nome,
+                preco: (item.preco + (item.preco * 0.1))
+            }
+        }
+        var listaComDesconto = listaProdutos.map(aplicarDesconto)
+        var listaComLucro = listaProdutos.map(aplicarLucro)
+
+        listaComDesconto.forEach(item => {
+            console.log(
+                "O preço do produto " + item.nome + " com desconto é " +
+                item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'} )
+            )
+        })
+        console.log('\n \n')
+        listaComLucro.forEach(item => {
+            console.log(
+                "O preço do produto " + item.nome + " com desconto é " +
+                item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'} )
+            )
+        })
+
+        
+    </script>
+</body>
+</html>

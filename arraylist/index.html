@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p><span id="demo"></span></p>
+
+    <script defer>
+        var persons = [
+            {firstname : "Malcom", lastname: "Reynolds"},
+            {firstname : "Kaylee", lastname: "Frye"},
+            {firstname : "Jayne", lastname: "Cobb"}
+        ];
+
+        function getFullName(item) {
+            var fullname = [
+                    item.firstname,
+                    item.lastname
+                ].join("<br>");
+            return fullname;
+        }
+        
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = persons.map(getFullName);
+        }
+        myFunction();
+    </script>
+</body>
+</html>

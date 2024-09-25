@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach 3</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="produto" placeholder="produto">
+        <input type="text" id="preco"   placeholder="preco">
+        <button>Adicionar</button>
+    </form>
+    
+    <p><span id="demo"></span></p>
+
+    <script defer>
+        var demo = document.getElementById("demo")
+        var produto = document.getElementById('produto')
+        var preco = document.getElementById('preco')
+        var button = document.querySelector('button')
+
+        listaProdutos = [
+            {nome: 'ps5', preco: 3500},
+            {nome: 'ps2', preco: 500}
+        ];
+
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            listaProdutos = [];
+            
+            var novoProduto = { nome: produto.value, preco: preco.value };
+            listaProdutos.push(novoProduto)
+            listar();
+        })
+
+        const listar = () => {
+            for (var i = 0; i < listaProdutos.length; i++) {
+                console.log(listaProdutos[i].nome, listaProdutos[i].preco)
+
+                demo.innerHTML += "Nome: " + listaProdutos[i].nome + ", Preço: " + listaProdutos[i].preco + "<br>";
+            }
+        }
+        listar()
+    </script>
+</body>
+</html>
