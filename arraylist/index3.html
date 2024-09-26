@@ -12,10 +12,10 @@
         <button>Adicionar</button>
     </form>
     
-    <p><span id="demo"></span></p>
+    <p><span id="lista"></span></p>
 
     <script defer>
-        var demo = document.getElementById("demo")
+        var lista = document.getElementById("lista")
         var produto = document.getElementById('produto')
         var preco = document.getElementById('preco')
         var button = document.querySelector('button')
@@ -38,7 +38,7 @@
             for (var i = 0; i < listaProdutos.length; i++) {
                 console.log(listaProdutos[i].nome, listaProdutos[i].preco)
 
-                demo.innerHTML += "Nome: " + listaProdutos[i].nome + ", Preço: " + listaProdutos[i].preco + "<br>";
+                lista.innerHTML += "Nome: " + listaProdutos[i].nome + ", Preço: " + listaProdutos[i].preco + "<br>";
             }
         }
         listar()
